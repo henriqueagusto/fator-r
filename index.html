@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fator R Pro | Calculadora Avançada para Simples Nacional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--////////////////////
+     /////// NAVBAR////////
+     ////////////////////// -->
+     <!-- LOGO -->     
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-calculator"></i>
+                    <span>FatorR<span class="logo-pro">Pro</span></span>
+                </div>
+            </div>
+      <!-- LINKS-->      
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Início</a>
+                    <a href="#calculator" class="nav-link">Calculadora</a>
+                    <a href="#simulator" class="nav-link">Simulador</a>
+                    <a href="#results" class="nav-link">Resultados</a>
+                    <a href="#comparative" class="nav-link">Comparativo</a>
+                </div>
+      <!-- SESSÃO BANCO DE DADOS-->          
+                <div class="nav-actions">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-user"></i>
+                        Área do Cliente
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-crown"></i>
+                        Assinar Pro
+                    </button>
+                </div>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+     <!--////////////////////
+     /////// HERO //////////
+     ////////////////////// -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+    <!-- Declaração de credibilidade-->    
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon"><i class="fas fa-rocket"></i></span>
+                    <span class="badge-text">Versão 2025 - Atualizada com as últimas mudanças fiscais</span>
+                </div>
+                <!-- Hero Section -->
+                <h1 class="hero-title">Calcule seu <span class="text-gradient">Fator R</span> com Precisão Profissional</h1>
+                
+                <p class="hero-description">
+                    Ferramenta especializada para contadores e empresários. Determine com exatidão o enquadramento tributário ideal 
+                    para sua empresa no Simples Nacional e maximize sua economia fiscal.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">+5.000</div>
+                        <div class="stat-label">Cálculos realizados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">R$ 28Mi+</div>
+                        <div class="stat-label">Economia identificada</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">99,1%</div>
+                        <div class="stat-label">Precisão</div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" onclick="startCalculator()">
+                        <i class="fas fa-bolt"></i>
+                        Calcular Agora
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="scrollToSection('features')">
+                        <i class="fas fa-play-circle"></i>
+                        Ver Demonstração
+                    </button>
+                </div>
+                
+                <div class="hero-clients">
+                    <p class="clients-label">Reconhecido por profissionais de:</p>
+                    <div class="clients-logos">
+                        <div class="client-logo">
+                            <i class="fas fa-building"></i>
+                            <span>Contabilidade</span>
+                        </div>
+                        <div class="client-logo">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Escritórios</span>
+                        </div>
+                        <div class="client-logo">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Consultorias</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         <!-- Prévia do painel/dashboard-->   
+            <div class="hero-visual">
+                <div class="visual-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-header">
+                            <div class="dashboard-title">Painel de Controle</div>
+                            <div class="dashboard-actions">
+                                <button class="icon-btn"><i class="fas fa-sync"></i></button>
+                                <button class="icon-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-content">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <div class="metric-value">31,5%</div>
+                                <div class="metric-label">Fator R Calculado</div>
+                                <div class="metric-trend up">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>2,3% vs meta</span>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-mini">
+                                <div class="chart-bar" style="height: 30%"></div>
+                                <div class="chart-bar" style="height: 45%"></div>
+                                <div class="chart-bar" style="height: 60%"></div>
+                                <div class="chart-bar" style="height: 75%"></div>
+                                <div class="chart-bar" style="height: 85%"></div>
+                                <div class="chart-bar" style="height: 100%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                            </div>
+                            
+                            <div class="indicator">
+                                <div class="indicator-dot success"></div>
+                                <div class="indicator-text">Classificação: Anexo III</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Seção de recursos/funcionalidades -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ferramentas <span class="text-gradient">Completas</span> para Análise Tributária</h2>
+                <p class="section-description">
+                    Desenvolvida por especialistas em direito tributário, nossa plataforma oferece cálculos precisos 
+                    e relatórios detalhados para uma tomada de decisão estratégica.
+                </p>
+            </div>
+            <!------ CARDS ------------->
+            <!-- CARD DE Cálculo Preciso do Fator R-->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="feature-title">Cálculo Preciso do Fator R</h3>
+                    <p class="feature-description">
+                        Algoritmo avançado que considera todas as variáveis legais para cálculo exato do Fator R, 
+                        incluindo pró-labore, folha de pagamento e encargos.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Inclui 13º salário</li>
+                        <li><i class="fas fa-check"></i> Considera 1/3 de férias</li>
+                        <li><i class="fas fa-check"></i> Calcula encargos sociais</li>
+                    </ul>
+                </div>
+            <!-- CARD DE Comparativo de Anexos-->    
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="feature-title">Comparativo de Anexos</h3>
+                    <p class="feature-description">
+                        Visualização clara das diferenças entre Anexo III e V, com projeção de economia 
+                        e análise de cenários para otimização tributária.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Análise side-by-side</li>
+                        <li><i class="fas fa-check"></i> Projeção de economia</li>
+                        <li><i class="fas fa-check"></i> Cenários personalizados</li>
+                    </ul>
+                </div>
+                <!-- CARD DE Relatórios Detalhados-->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="feature-title">Relatórios Detalhados</h3>
+                    <p class="feature-description">
+                        Geração de relatórios profissionais em PDF com todos os dados calculados, 
+                        gráficos explicativos e recomendações personalizadas.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Exportação em PDF</li>
+                        <li><i class="fas fa-check"></i> Gráficos e tabelas</li>
+                        <li><i class="fas fa-check"></i> Recomendações estratégicas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Calculadora interativa -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Calculadora <span class="text-gradient">Fator R</span></h2>
+                <p class="section-description">
+                    Preencha os dados abaixo para calcular com precisão o Fator R da sua empresa e 
+                    determinar o enquadramento ideal no Simples Nacional.
+                </p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-sidebar">
+                    <div class="calc-progress">
+                        <div class="progress-header">
+                            <h3>Progresso do Cálculo</h3>
+                            <div class="progress-value">20%</div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-steps">
+                        <div class="step-item active">
+                            <div class="step-number">1</div>
+                            <div class="step-info">
+                                <div class="step-title">Dados da Empresa</div>
+                                <div class="step-description">Informações básicas</div>
+                            </div>
+                            <div class="step-status">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-info">
+                                <div class="step-title">Faturamento</div>
+                                <div class="step-description">Receita bruta anual</div>
+                            </div>
+                            <div class="step-status">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-info">
+                                <div class="step-title">Folha de Pagamento</div>
+                                <div class="step-description">Salários e encargos</div>
+                            </div>
+                            <div class="step-status">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-info">
+                                <div class="step-title">Benefícios e Adicionais</div>
+                                <div class="step-description">13º, férias e outros</div>
+                            </div>
+                            <div class="step-status">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-info">
+                                <div class="step-title">Resultados</div>
+                                <div class="step-description">Análise completa</div>
+                            </div>
+                            <div class="step-status">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-help">
+                        <div class="help-header">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Precisa de ajuda?</span>
+                        </div>
+                        <p>Nossa equipe de especialistas está disponível para auxiliar no preenchimento correto dos dados.</p>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-comments"></i>
+                            Falar com especialista
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="calculator-main">
+                    <div class="calc-card">
+                        <div class="calc-header">
+                            <h3>Dados da Empresa</h3>
+                            <p>Informe os dados básicos da sua empresa para começarmos</p>
+                        </div>
+                        
+                        <div class="calc-body">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="companyName">Nome da Empresa</label>
+                                    <input type="text" id="companyName" placeholder="Ex: Soluções Tributárias Ltda">
+                                    <div class="form-hint">Opcional - para identificação nos relatórios</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cnpj">CNPJ</label>
+                                    <input type="text" id="cnpj" placeholder="00.000.000/0000-00">
+                                    <div class="form-hint">Opcional - para documentos oficiais</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Atividade Principal da Empresa</label>
+                                <div class="option-cards">
+                                    <div class="option-card" data-value="servicos">
+                                        <div class="option-icon">
+                                            <i class="fas fa-laptop-code"></i>
+                                        </div>
+                                        <div class="option-content">
+                                            <h4>Prestação de Serviços</h4>
+                                            <p>Consultoria, TI, Marketing, Design e outros serviços</p>
+                                        </div>
+                                        <div class="option-check">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="option-card" data-value="comercio">
+                                        <div class="option-icon">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                        <div class="option-content">
+                                            <h4>Comércio</h4>
+                                            <p>Varejo, atacado, e-commerce e distribuição</p>
+                                        </div>
+                                        <div class="option-check">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="option-card" data-value="industria">
+                                        <div class="option-icon">
+                                            <i class="fas fa-industry"></i>
+                                        </div>
+                                        <div class="option-content">
+                                            <h4>Indústria</h4>
+                                            <p>Produção, manufatura e transformação</p>
+                                        </div>
+                                        <div class="option-check">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="option-card" data-value="misto">
+                                        <div class="option-icon">
+                                            <i class="fas fa-blender-phone"></i>
+                                        </div>
+                                        <div class="option-content">
+                                            <h4>Atividade Mista</h4>
+                                            <p>Combinação de serviços, comércio e indústria</p>
+                                        </div>
+                                        <div class="option-check">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-footer">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-times"></i>
+                                Cancelar
+                            </button>
+                            <button class="btn btn-primary" onclick="nextStep(2)">
+                                Continuar
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Section -->
+    <section class="simulator-section" id="simulator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simulador <span class="text-gradient">Avançado</span></h2>
+                <p class="section-description">
+                    Teste diferentes cenários e identifique a estratégia ideal para enquadramento 
+                    no Anexo III do Simples Nacional.
+                </p>
+            </div>
+            
+            <div class="simulator-container">
+                <div class="simulator-controls">
+                    <div class="control-panel">
+                        <div class="control-header">
+                            <h3>Parâmetros do Simulador</h3>
+                            <button class="btn btn-sm btn-outline">
+                                <i class="fas fa-sliders-h"></i>
+                                Configurações
+                            </button>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="simRevenue">Faturamento Anual (RBT12)</label>
+                            <div class="slider-container">
+                                <input type="range" id="simRevenue" min="0" max="4800000" step="10000" value="1200000">
+                                <div class="slider-value">R$ 1.200.000,00</div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="simProlabore">Pró-labore Mensal</label>
+                            <div class="slider-container">
+                                <input type="range" id="simProlabore" min="0" max="100000" step="1000" value="15000">
+                                <div class="slider-value">R$ 15.000,00</div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="simEmployees">Número de Funcionários</label>
+                            <div class="slider-container">
+                                <input type="range" id="simEmployees" min="0" max="50" step="1" value="5">
+                                <div class="slider-value">5 funcionários</div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="simAvgSalary">Salário Médio</label>
+                            <div class="slider-container">
+                                <input type="range" id="simAvgSalary" min="1500" max="20000" step="100" value="3000">
+                                <div class="slider-value">R$ 3.000,00</div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-actions">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-redo"></i>
+                                Redefinir
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-calculator"></i>
+                                Simular
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simulator-results">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h3>Resultado da Simulação</h3>
+                            <div class="result-badge success">
+                                <i class="fas fa-check-circle"></i>
+                                Anexo III
+                            </div>
+                        </div>
+                        
+                        <div class="result-content">
+                            <div class="result-metric">
+                                <div class="metric-value">28,5%</div>
+                                <div class="metric-label">Fator R Calculado</div>
+                                <div class="metric-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 28.5%"></div>
+                                    </div>
+                                    <div class="progress-labels">
+                                        <span>0%</span>
+                                        <span>28%</span>
+                                        <span>100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="result-comparison">
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Anexo III</div>
+                                    <div class="comparison-value">R$ 8.240/mês</div>
+                                    <div class="comparison-bar">
+                                        <div class="bar-fill" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Anexo V</div>
+                                    <div class="comparison-value">R$ 12.850/mês</div>
+                                    <div class="comparison-bar">
+                                        <div class="bar-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="result-savings">
+                                <div class="savings-icon">
+                                    <i class="fas fa-piggy-bank"></i>
+                                </div>
+                                <div class="savings-content">
+                                    <h4>Economia Estimada</h4>
+                                    <div class="savings-value">R$ 55.320/ano</div>
+                                    <p>Com o enquadramento no Anexo III</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-charts">
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h4>Comparativo de Tributação</h4>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color anexo-iii"></div>
+                                        <span>Anexo III</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color anexo-v"></div>
+                                        <span>Anexo V</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-bar"></i>
+                                <p>Gráfico interativo será exibido aqui</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h4>Evolução do Fator R</h4>
+                                <div class="chart-options">
+                                    <button class="option-btn active">Mensal</button>
+                                    <button class="option-btn">Trimestral</button>
+                                    <button class="option-btn">Anual</button>
+                                </div>
+                            </div>
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                                <p>Gráfico de evolução será exibido aqui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="results">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Resultados <span class="text-gradient">Detalhados</span></h2>
+                <p class="section-description">
+                    Análise completa do cálculo do Fator R com visualização detalhada dos resultados 
+                    e recomendações personalizadas para sua empresa.
+                </p>
+            </div>
+            
+            <div class="results-container">
+                <div class="results-summary">
+                    <div class="summary-card success">
+                        <div class="summary-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="summary-content">
+                            <h3>Classificação: Anexo III</h3>
+                            <div class="summary-value">Fator R: 31,5%</div>
+                            <p>Parabéns! Sua empresa se qualifica para o Anexo III com alíquotas reduzidas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">R$ 4.610,00</div>
+                                <div class="stat-label">Economia mensal</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">R$ 55.320,00</div>
+                                <div class="stat-label">Economia anual</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">6,8%</div>
+                                <div class="stat-label">Alíquota efetiva</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-details">
+                    <div class="detail-tabs">
+                        <button class="tab-btn active">Visão Geral</button>
+                        <button class="tab-btn">Cálculos Detalhados</button>
+                        <button class="tab-btn">Comparativo</button>
+                        <button class="tab-btn">Recomendações</button>
+                    </div>
+                    
+                    <div class="detail-content">
+                        <div class="detail-overview">
+                            <div class="overview-chart">
+                                <div class="chart-placeholder large">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <p>Gráfico de distribuição será exibido aqui</p>
+                                </div>
+                            </div>
+                            
+                            <div class="overview-data">
+                                <h4>Dados do Cálculo</h4>
+                                <div class="data-grid">
+                                    <div class="data-item">
+                                        <span class="data-label">Receita Bruta Anual</span>
+                                        <span class="data-value">R$ 360.000,00</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span class="data-label">Folha de Pagamento + Encargos</span>
+                                        <span class="data-value">R$ 113.400,00</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span class="data-label">Inclui 13º Salário</span>
+                                        <span class="data-value">Sim</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span class="data-label">Inclui 1/3 de Férias</span>
+                                        <span class="data-value">Sim</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span class="data-label">Pró-labore Considerado</span>
+                                        <span class="data-value">R$ 48.000,00</span>
+                                    </div>
+                                    <div class="data-item">
+                                        <span class="data-label">Funcionários CLT</span>
+                                        <span class="data-value">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-actions">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-download"></i>
+                        Exportar PDF
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-share-alt"></i>
+                        Compartilhar
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-sync"></i>
+                        Recalcular
+                    </button>
+                    <button class="btn btn-accent">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        Gerar Relatório Completo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparative Section -->
+    <section class="comparative-section" id="comparative">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Análise <span class="text-gradient">Comparativa</span></h2>
+                <p class="section-description">
+                    Compare detalhadamente as diferenças entre os Anexos III e V do Simples Nacional 
+                    e entenda o impacto financeiro para sua empresa.
+                </p>
+            </div>
+            
+            <div class="comparative-container">
+                <div class="comparative-tabs">
+                    <button class="comparative-tab active">Visão Geral</button>
+                    <button class="comparative-tab">Por Faixa de Faturamento</button>
+                    <button class="comparative-tab">Projeção Anual</button>
+                    <button class="comparative-tab">Cenários</button>
+                </div>
+                
+                <div class="comparative-content">
+                    <div class="comparative-table">
+                        <div class="table-header">
+                            <div class="table-col">Descrição</div>
+                            <div class="table-col">Anexo III</div>
+                            <div class="table-col">Anexo V</div>
+                            <div class="table-col">Diferença</div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="table-col">Faixa de Enquadramento</div>
+                            <div class="table-col">3ª Faixa</div>
+                            <div class="table-col">3ª Faixa</div>
+                            <div class="table-col">-</div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="table-col">Alíquota Nominal</div>
+                            <div class="table-col">13,50%</div>
+                            <div class="table-col">19,50%</div>
+                            <div class="table-col"><span class="diff-negative">+6,00%</span></div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="table-col">Parcela a Deduzir</div>
+                            <div class="table-col">R$ 17.640,00</div>
+                            <div class="table-col">R$ 9.900,00</div>
+                            <div class="table-col"><span class="diff-positive">-R$ 7.740,00</span></div>
+                        </div>
+                        
+                        <div class="table-row highlight">
+                            <div class="table-col">Alíquota Efetiva</div>
+                            <div class="table-col">6,83%</div>
+                            <div class="table-col">13,61%</div>
+                            <div class="table-col"><span class="diff-negative">+6,78%</span></div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="table-col">Imposto Mensal</div>
+                            <div class="table-col">R$ 2.049,00</div>
+                            <div class="table-col">R$ 4.083,00</div>
+                            <div class="table-col"><span class="diff-negative">+R$ 2.034,00</span></div>
+                        </div>
+                        
+                        <div class="table-row highlight">
+                            <div class="table-col">Imposto Anual</div>
+                            <div class="table-col">R$ 24.588,00</div>
+                            <div class="table-col">R$ 48.996,00</div>
+                            <div class="table-col"><span class="diff-negative">+R$ 24.408,00</span></div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="table-col">Custo Tributário</div>
+                            <div class="table-col">Baixo</div>
+                            <div class="table-col">Alto</div>
+                            <div class="table-col"><span class="diff-negative">+99,3%</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="comparative-charts">
+                        <div class="comparative-chart">
+                            <div class="chart-header">
+                                <h4>Comparativo de Alíquotas</h4>
+                            </div>
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-bar"></i>
+                                <p>Gráfico comparativo será exibido aqui</p>
+                            </div>
+                        </div>
+                        
+                        <div class="comparative-chart">
+                            <div class="chart-header">
+                                <h4>Economia por Faixa de Faturamento</h4>
+                            </div>
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                                <p>Gráfico de economia será exibido aqui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-calculator"></i>
+                        <span>FatorR<span class="logo-pro">Pro</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Calculadora profissional baseada na LC 123/2006 e resoluções CGSN vigentes para 2025.
+                        Desenvolvida por especialistas em tributação do Simples Nacional.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Recursos</h4>
+                        <a href="#">Calculadora</a>
+                        <a href="#">Simulador</a>
+                        <a href="#">Relatórios</a>
+                        <a href="#">Comparativo</a>
+                        <a href="#">Tabelas 2025</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Empresa</h4>
+                        <a href="#">Sobre Nós</a>
+                        <a href="#">Consultoria</a>
+                        <a href="#">Parceiros</a>
+                        <a href="#">Contato</a>
+                        <a href="#">Trabalhe Conosco</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Suporte</h4>
+                        <a href="#">Central de Ajuda</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Tutoriais</a>
+                        <a href="#">Atualizações</a>
+                        <a href="#">Status do Sistema</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">LGPD</a>
+                        <a href="#">Licenças</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Fator R Pro. Todos os direitos reservados.</p>
+                </div>
+                
+                <div class="footer- badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Segurança e Privacidade</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificado Digital</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
